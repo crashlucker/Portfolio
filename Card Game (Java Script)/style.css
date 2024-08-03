@@ -1,0 +1,159 @@
+/* Global */
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+article {
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #111b4c;
+  background: url("img/game.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 62px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 2%;
+  width: calc(91% / 4);
+  height: calc(40% / 2);
+  cursor: pointer;
+  transition: transform 1s ease-in-out, background-image 0s .5s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 300px;
+  background: url("img/cyberpunk.jpg") no-repeat center;
+  background-size: cover;
+  box-shadow: 12px 12px 15px 0px rgba(0, 0, 0, 0.75);
+  perspective: 300px;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.one {
+  background-image: url('img/card-1.jpg');
+}
+
+.two {
+  background-image: url('img/card-2.jpg');
+}
+
+.three {
+  background-image: url('img/card-3.jpg');
+}
+
+.four {
+  background-image: url('img/card-4.jpg');
+}
+
+.five {
+  background-image: url('img/card-5.jpeg');
+}
+
+.six {
+  background-image: url('img/card-6.jpeg');
+}
+
+.seven {
+  background-image: url('img/card-7.jpeg');
+}
+
+.eight {
+  background-image: url('img/card-8.jpeg');
+}
+
+.item:nth-child(n + 12) {
+  margin-bottom: 0;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.click-restrict {
+  pointer-events: none;
+}
+
+.replay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+  border-radius: 30px;
+  bottom: 200px;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4f284d;
+  color: white;
+  font-size: 25px;
+  box-shadow: 12px 12px 15px 0px rgba(0, 0, 0, 0.75);
+  transition: all .2s ease-in-out;
+}
+
+.replay:hover {
+  background-color: #3d1f3c;
+}
